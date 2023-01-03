@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="js.files/energiforbrug.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ulx5pgg.css">
+    <title>Energiforbrug</title>
+  </head>
+
+  <body class="bg-main">
+    <header class="header" id="header">
+      <nav class="nav container">
+          <img class="nav__logo text-left" src="images/hydrovertic_logo_small.svg" alt="green_hydrovertic_logo">
+          <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                  <li class="nav__item">
+                      <a href="drivhushome.html" class="nav__link">
+                          <i class='bx bx-home-alt nav__icon'></i>
+                          <span class="nav__name">Hjem</span>
+                      </a>
+                  </li>
+                  
+                  <li class="nav__item">
+                      <a href="notifikationgood.html" class="nav__link">
+                          <i class='bx bx-bell nav__icon'></i>
+                          <span class="nav__name">Notifikation</span>
+                      </a>
+                  </li>
+
+                  <li class="nav__item">
+                      <a href="menu.html" class="nav__link">
+                          <i class='bx bx-menu nav__icon sidebarOpen'></i>
+                          <span class="nav__name">Menu</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <img class = "nav__img" src="images/globe_icon.svg" alt="black_globe_icon_language">              
+      </nav>
+  </header>
+
+    <section class="bg-head header-space">
+      <div class="container">
+        <div class="text-left">
+          <h2 class="title">Energiforbrug</h2>
+          <h3 class="dialogp">Vælg målningsparameter</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dropdown menu -->
+
+    <!--     dropdown 1 -->
+    <div class="dropdown">
+      <div class="dd1">
+        <select id="menu">
+          <option value="1">Moduler</option>
+          <option value="2">I alt</option>
+        </select>
+        <div id="result"></div>
+      </div>
+
+      <!--     Dropdown 2 -->
+      <div class="dd2">
+        <select id="menu2">
+          <option value="1">Måned</option>
+          <option value="2">Uge</option>
+        </select>
+      </div>
+    </div>
+
+    <!--     month selecter-->
+
+    <div class="month-selector">
+      <button class="month-selector__button1">
+        <i class="bx bx-left-arrow-alt"></i>
+      </button>
+      <p class="month-selector__current-month">December 10 2022</p>
+      <button class="month-selector__button2">
+        <i class="bx bx-right-arrow-alt"></i>
+      </button>
+    </div>
+
+    <!-- Grafer -->
+    <div class="container_eg">
+      <div class="chartMenu">
+        <div class="chartBox">
+          <canvas id="myChart"></canvas>
+          <div class="container_energi">
+            <button class="tilbagebtn" onclick="window.location.href = 'menu.html';">
+              Tilbage
+            </button>
+          </div>
+        </div>
+        <button class="btnchart" onclick="chartType('bar')">Bar Chart</button>
+        <button class="btnchart1" onclick="chartType('pie')">Pie Chart</button>
+      </div>
+    </div>
+  </body>
+</html>
