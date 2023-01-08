@@ -1306,7 +1306,7 @@ img {
 /* Slut til notifikation alt er godt */
 
 /* Start kontakt */
-::placeholder {
+#kontakt::placeholder {
   color: gray;
   position: absolute;
   top: 25px;
@@ -1320,6 +1320,7 @@ img {
   border: none;
   border-radius: 10px;
   margin-top: 20px;
+  box-shadow: 0 3px 6px hsla(var(--hue), var(--sat), 15%, 0.15);
 }
 
 .besked {
@@ -1350,6 +1351,7 @@ img {
   margin-top: 30px;
   cursor: pointer;
   float: right;
+  box-shadow: 0 3px 6px hsla(var(--hue), var(--sat), 15%, 0.15);
 }
 
 .kontaktinfo {
@@ -1382,6 +1384,7 @@ img {
 
 .profilsideicon {
   width: 25%;
+  max-width: 200px;
   padding-top: 20px;
 }
 
@@ -1421,3 +1424,5 @@ img {
   cursor: pointer;
   box-shadow: 0 3px 6px hsla(var(--hue), var(--sat), 15%, 0.15);
 }
+
+/* Slut profil */
